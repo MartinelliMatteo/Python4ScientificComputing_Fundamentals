@@ -9,7 +9,6 @@ def wallCalc_onlyInSeries(listS):
     layers_wall_series_win = listS + airOnTwoSides_win
     Rtot_series_sum = 0
     Rtot_series_win = 0
-    
     for anyLayer in layers_wall_series_sum:
         Rvalue_layer_series_sum = Material_library[anyLayer]
         Rtot_series_sum = Rtot_series_sum + Rvalue_layer_series_sum
