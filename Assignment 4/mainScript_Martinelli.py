@@ -1,6 +1,6 @@
 import os
 
-os.chdir ("C:\Users\Utente\Desktop\POLIMI\Polimi Lezioni\Building Systems\Assignments")
+os.chdir ("C:\Users\Utente\Desktop\git_clone\Python4ScientificComputing_Fundamentals\Assignment 4")
 
 import wallCalculations_Martinelli as WC
 
