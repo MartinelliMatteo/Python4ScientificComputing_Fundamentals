@@ -13,12 +13,14 @@ U_roof = 0.25
 
 results_wall = WC.wallCalc_withParallel(layers_wall_series,layers_wall_par,0.7)
 results_door = WC.wallCalc_onlyInSeries(layers_door)
-#results_roof = WC.wallCalc_onlyInSeries(layers_roof)  the value is given by the example
+#results_roof = WC.wallCalc_onlyInSeries(layers_roof)  the value of U is given by the example
 
 U_wall_sum = results_wall["Utot_sum"]
 U_wall_win = results_wall["Utot_win"]
 U_door_sum = results_door["Utot_sum"]
 U_door_win = results_door["Utot_win"]
+#U_roof_sum = results_roof["Utot_sum"]   the value of U is given by the example
+#U_roof_win = results_roof["Utot_win"]   the value of U is given by the example
 
 print "the U value of the wall in summer is " + str(U_wall_sum)
 print "the U value of the wall in winter is " + str(U_wall_win)

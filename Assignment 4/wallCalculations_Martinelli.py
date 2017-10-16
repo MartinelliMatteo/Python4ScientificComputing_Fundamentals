@@ -1,10 +1,6 @@
 Material_library = {"stucco_13mm":0.023,"FaceBrick_100mm":0.075,"BuildingPaper":0.011,"Plywood_13mm":0.11,"insideSurface":0.12,"outsideSurfaceSummer":0.044,"wood_50mm":0.44,
 "outsideSurfaceWinter":0.03,"woodFiberboard_13mm":0.23,"WoodBevelLappedSiding":0.14,"glassFiberInsulation_90mm":2.52,"woodStud_38x90mm":0.63,"gypsiumWallboard_13mm":0.079,"commonBrick_100mm":0.12}
 
-#f_ins = 0.7
-
-#layers_wall_series = ["gypsiumWallboard_13mm","commonBrick_100mm","woodFiberboard_13mm","WoodBevelLappedSiding"]
-#layers_wall_par = ["glassFiberInsulation_90mm","woodStud_38x90mm"]
 airOnTwoSides_win = ["insideSurface","outsideSurfaceWinter"]
 airOnTwoSides_sum = ["insideSurface","outsideSurfaceSummer"]
 
