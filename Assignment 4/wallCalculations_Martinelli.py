@@ -1,10 +1,9 @@
-Material_library = {"stucco_13mm":0.023,"FaceBrick_100mm":0.075,"BuildingPaper":0.011,"Plywood_13mm":0.11,"insideSurface":0.12,"outsideSurfaceSummer":0.044,"wood_50mm":0.44,
-"outsideSurfaceWinter":0.03,"woodFiberboard_13mm":0.23,"WoodBevelLappedSiding":0.14,"glassFiberInsulation_90mm":2.52,"woodStud_38x90mm":0.63,"gypsiumWallboard_13mm":0.079,"commonBrick_100mm":0.12}
-
-airOnTwoSides_win = ["insideSurface","outsideSurfaceWinter"]
-airOnTwoSides_sum = ["insideSurface","outsideSurfaceSummer"]
-
 def wallCalc_onlyInSeries(listS):
+    Material_library = {"stucco_13mm":0.023,"FaceBrick_100mm":0.075,"BuildingPaper":0.011,"Plywood_13mm":0.11,"insideSurface":0.12,"outsideSurfaceSummer":0.044,"wood_50mm":0.44,"AsphaltShingleRoofing":0.077,
+    "outsideSurfaceWinter":0.03,"woodFiberboard_13mm":0.23,"WoodBevelLappedSiding":0.14,"glassFiberInsulation_90mm":2.52,"woodStud_38x90mm":0.63,"gypsiumWallboard_13mm":0.079,"commonBrick_100mm":0.12,
+    "urethaneRigidFoam_90mm":3.53}
+    airOnTwoSides_win = ["insideSurface","outsideSurfaceWinter"]
+    airOnTwoSides_sum = ["insideSurface","outsideSurfaceSummer"]
     layers_wall_series_sum = listS + airOnTwoSides_sum
     layers_wall_series_win = listS + airOnTwoSides_win
     Rtot_series_sum = 0
@@ -25,6 +24,11 @@ def wallCalc_onlyInSeries(listS):
 
 
 def wallCalc_withParallel(listSer,listPar,r): #we don't know how many variables, so we define a list
+    Material_library = {"stucco_13mm":0.023,"FaceBrick_100mm":0.075,"BuildingPaper":0.011,"Plywood_13mm":0.11,"insideSurface":0.12,"outsideSurfaceSummer":0.044,"wood_50mm":0.44,"AsphaltShingleRoofing":0.077,
+    "outsideSurfaceWinter":0.03,"woodFiberboard_13mm":0.23,"WoodBevelLappedSiding":0.14,"glassFiberInsulation_90mm":2.52,"woodStud_38x90mm":0.63,"gypsiumWallboard_13mm":0.079,"commonBrick_100mm":0.12,
+    "urethaneRigidFoam_90mm":3.53}
+    airOnTwoSides_win = ["insideSurface","outsideSurfaceWinter"]
+    airOnTwoSides_sum = ["insideSurface","outsideSurfaceSummer"]
     layers_wall_series_sum = listSer + airOnTwoSides_sum
     layers_wall_series_win = listSer + airOnTwoSides_win
     Rtot_series_sum = 0

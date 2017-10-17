@@ -7,26 +7,28 @@ import wallCalculations_Martinelli as WC
 layers_wall_series = ["gypsiumWallboard_13mm","commonBrick_100mm","woodFiberboard_13mm","WoodBevelLappedSiding"]
 layers_wall_par = ["glassFiberInsulation_90mm","woodStud_38x90mm"]
 layers_door = ["wood_50mm"]
-layers_roof = ["WoodBevelLappedSiding","woodFiberboard_13mm","glassFiberInsulation_90mm","gypsiumWallboard_13mm"]
+#layers_roof = ["wood_50mm","urethaneRigidFoam_90mm","AsphaltShingleRoofing"]
 
-U_roof = 0.25
+U_roof_win = 0.25
 
 results_wall = WC.wallCalc_withParallel(layers_wall_series,layers_wall_par,0.7)
 results_door = WC.wallCalc_onlyInSeries(layers_door)
-#results_roof = WC.wallCalc_onlyInSeries(layers_roof)  the value of U is given by the example
+#results_roof = WC.wallCalc_onlyInSeries(layers_roof)  #the value of U is given by the example, this can be used if U is not given and the layers are given in a list
 
 U_wall_sum = results_wall["Utot_sum"]
 U_wall_win = results_wall["Utot_win"]
 U_door_sum = results_door["Utot_sum"]
 U_door_win = results_door["Utot_win"]
-#U_roof_sum = results_roof["Utot_sum"]   the value of U is given by the example
-#U_roof_win = results_roof["Utot_win"]   the value of U is given by the example
+#U_roof_sum = results_roof["Utot_sum"]   #the value of U is given by the example, same as before
+#U_roof_win = results_roof["Utot_win"]   #the value of U is given by the example, same as before
 
-print "the U value of the wall in summer is " + str(U_wall_sum)
-print "the U value of the wall in winter is " + str(U_wall_win)
+print "the U value of the wall in summer is " + str(U_wall_sum) +" W/(m2 degC)"
+print "the U value of the wall in winter is " + str(U_wall_win) +" W/(m2 degC)"
 
-print "the U value of the door in summer is " + str(U_door_sum)
-print "the U value of the door in winter is " + str(U_door_win)
+print "the U value of the door in summer is " + str(U_door_sum) +" W/(m2 degC)"
+print "the U value of the door in winter is " + str(U_door_win) +" W/(m2 degC)"
+
+print "The U value of the roof is " + str(U_roof_win) +" W/(m2 degC)"
 print " "
 
 Tin = 20
@@ -37,7 +39,7 @@ deltaT_heating = Tin - Tout
 
 HF_wall = U_wall_win*deltaT_heating
 HF_door = U_door_win*deltaT_heating
-HF_roof = U_roof*deltaT_heating
+HF_roof = U_roof_win*deltaT_heating
 
 L1 = 10
 L2 = 20
